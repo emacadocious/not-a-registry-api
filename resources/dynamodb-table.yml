@@ -1,5 +1,5 @@
 Resources:
-  NotesTable:
+  NotARegistryTable:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: ${self:custom.tableName}
