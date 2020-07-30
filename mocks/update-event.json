@@ -1,7 +1,7 @@
 {
-  "body": "{\"content\":\"new world\",\"attachment\":\"new.jpg\"}",
+  "body": "{\"content\":\"new world\",\"attachment\":\"new.jpg\",\"quanityAvailable\":2,\"available\":true,\"purchased\":false,\"purchaseHistory\":{\"quanity\":1}}",
   "pathParameters": {
-    "id": "67875be0-be1b-11ea-9c61-3de8e5abf98d"
+    "id": "026ef4f0-d2ae-11ea-acc0-5f115d8f22d4"
   },
   "requestContext": {
     "identity": {

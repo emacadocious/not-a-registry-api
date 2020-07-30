@@ -11,6 +11,7 @@ export const main = handler(async (event, context) => {
     // - ':userId': defines 'userId' to be Identity Pool identity id
     //   of the authenticated user
     KeyConditionExpression: "userId = :userId",
+    FilterExpression: "attribute_not_exists(test)",
     ExpressionAttributeValues: {
       ":userId": process.env.SECRET_ID
     }
