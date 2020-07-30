@@ -15,17 +15,19 @@ export const main = handler(async (event, context) => {
     // - 'attachment': parsed from request body
     // - 'createdAt': current Unix timestamp
     Item: {
-      userId: event.requestContext.identity.cognitoIdentityId,
+      userId: process.env.SECRET_ID,
       itemId: uuid.v1(),
-      content: data.content,
       attachment: data.attachment,
       createdAt: Date.now(),
       image: data.imageUrl,
-      description: data.description,
-      price: data.price,
-      units: data.units,
-      dateAdded: data.dateAdded,
-      purcahseDate: data.purchaseDate
+      title: data.itemTitle,
+      description: data.itemDescription,
+      price: data.itemPrice,
+      available: data.isAvailable,
+      purchased: !data.isAvailable,
+      quanityNeeded: data.quanityNeeded,
+      quanityAvailable: data.isAvailable ? data.quanityNeeded : 0,
+      purchaseHistory: []
     }
   };
 

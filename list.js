@@ -12,7 +12,7 @@ export const main = handler(async (event, context) => {
     //   of the authenticated user
     KeyConditionExpression: "userId = :userId",
     ExpressionAttributeValues: {
-      ":userId": "12345"
+      ":userId": process.env.SECRET_ID
     }
   };
 

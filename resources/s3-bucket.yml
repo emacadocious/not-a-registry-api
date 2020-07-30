@@ -3,6 +3,7 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       # Set the CORS policy
+      AccessControl: PublicRead
       CorsConfiguration:
         CorsRules:
           -

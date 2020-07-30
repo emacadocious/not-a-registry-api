@@ -91,6 +91,7 @@ functions:
           path: items/{id}
           method: put
           cors: true
+          authorizer: aws_iam
 
   delete:
     # Defines an HTTP API endpoint that calls the main function in delete.js
@@ -126,4 +127,5 @@ resources:
   - ${file(resources/s3-bucket.yml)}
   # Cognito
   - ${file(resources/cognito-user-pool.yml)}
+  # Identity Pool
   - ${file(resources/cognito-identity-pool.yml)}

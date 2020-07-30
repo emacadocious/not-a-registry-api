@@ -1,9 +1,6 @@
-export function calculateCost(storage) {
-  const rate = storage <= 10
-    ? 4
-    : storage <= 100
-      ? 2
-      : 1;
-
-  return rate * storage * 100;
+export function calculateCost(price, quanity) {
+  if (!Number(price) || !Number(quanity)) {
+    throw new Error('Please pass a valid number.');
+  }
+  return (price * quanity) * 100;
 }
